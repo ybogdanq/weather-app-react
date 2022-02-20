@@ -1,8 +1,26 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# Weather App [React]
+
+This project was created to train my React/Redux/Typescript skills.
+Also this project is an alias to my previous project named Weather App ( you can find it on my github [repository](https://github.com/ybogdanq/WeatherApp) or by clicking this direct [link](https://ybogdanq.github.io/WeatherApp/) )
+
+`You should check up more pretty good projects from my `[portfolio](<(https://ybogdanq.github.io/BusinessCard/)>).
+
+
+## Setting up project
+`To set up project you have to:`
+1. Download all files from DEV branch in my repository.
+
+2. Run `"npm i"` in terminal to install all dependecies.
+
+3. Start the dev server by running `"npm run start"` to see all changes and to see UI of the project.
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm run stylelint`
+
+Runs the style linting of css/scss code (But actually this command breaks up some scss code in case that I had to setup more dependencies, but I didn't). You can still run up this command, but `I HAVE TO WARN YOU THAT YOU SHOULDN'T DO THIS`.
 
 ### `npm start`
 
@@ -26,19 +44,3 @@ The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
