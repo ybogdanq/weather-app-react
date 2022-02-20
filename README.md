@@ -3,11 +3,12 @@
 This project was created to train my React/Redux/Typescript skills.
 Also this project is an alias to my previous project named Weather App ( you can find it on my github [repository](https://github.com/ybogdanq/WeatherApp) or by clicking this direct [link](https://ybogdanq.github.io/WeatherApp/) )
 
-`You should check up more pretty good projects from my `[portfolio](<(https://ybogdanq.github.io/BusinessCard/)>).
-
+`You should check up more pretty good projects from my `[portfolio](https://ybogdanq.github.io/BusinessCard).
 
 ## Setting up project
+
 `To set up project you have to:`
+
 1. Download all files from DEV branch in my repository.
 
 2. Run `"npm i"` in terminal to install all dependecies.
