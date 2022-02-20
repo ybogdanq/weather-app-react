@@ -1,0 +1,36 @@
+@import "./contentSide.scss";
+
+.footer {
+  flex-shrink: 0;
+
+  width: 100%;
+  margin-top: auto;
+  padding: 20px 10px;
+
+  text-align: center;
+
+  background-color: #fff;
+  box-shadow: 3px 0 5px 0 rgba(0, 0, 0, 0.1);
+
+  .openWeather-link {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    text-decoration: none;
+
+    span {
+      margin: 0 10px;
+
+      color: #474747;
+
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    img {
+      width: 100%;
+      max-width: 90px;
+    }
+  }
+}

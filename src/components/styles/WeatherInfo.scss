@@ -1,0 +1,18 @@
+@import "./contentSide.scss";
+@import "./LSWeatherInfo.scss";
+@import "./RSWeatherInfo.scss";
+
+.weather-info {
+	display: flex;
+	overflow: hidden;
+	align-items: center;
+
+	@extend %content_side;
+	@extend %content_shadow;
+}
+
+@media screen and (max-width: 768px) {
+	.weather-info {
+		display: block;
+	}
+}

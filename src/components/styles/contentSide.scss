@@ -1,0 +1,23 @@
+%content_shadow {
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+%content_side {
+  display: block;
+
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  padding: 20px;
+
+  border: none;
+  border-radius: 15px;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  %content_side {
+    margin: 0 auto 20px;
+    padding: 15px;
+  }
+}

@@ -1,0 +1,22 @@
+@import "./contentSide.scss";
+
+.city-searchbar {
+	width: 65%;
+	padding: 15px 20px;
+
+	outline: none;
+
+	@extend %content_side;
+	@extend %content_shadow;
+}
+
+@media screen and (max-width: 768px) {
+	.city-searchbar {
+		width: 85%;
+		padding: 13px 15px;
+
+		outline: none;
+
+		font-size: 13px;
+	}
+}

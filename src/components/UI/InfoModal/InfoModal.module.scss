@@ -1,0 +1,43 @@
+@import "../../styles/contentSide.scss";
+
+.infoModal {
+	position: relative;
+	position: fixed;
+	z-index: 100;
+	top: 10px;
+	right: 10px;
+
+	display: block;
+	overflow: hidden;
+
+	max-width: 100%;
+	padding: 10px 17px;
+
+	white-space: nowrap;
+	text-overflow: ellipsis;
+
+	color: #212121;
+	border: none;
+	border-radius: 15px;
+	background-color: #EEE;
+
+	@extend %content_shadow;
+}
+
+.danger {
+	color: #FFF;
+	background-color: #E45C5C;
+	box-shadow: 0 3px 5px 0 rgba($color: #E45C5C, $alpha: 30%);
+}
+
+.warning {
+	color: #FFF;
+	background-color: #DFD21F;
+	box-shadow: 0 3px 5px 0 rgba($color: #E9EC22, $alpha: 30%);
+}
+
+.primary {
+	color: #FFF;
+	background-color: #40AFF8;
+	box-shadow: 0 3px 5px 0 rgba($color: #40AFF8, $alpha: 30%);
+}

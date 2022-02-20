@@ -1,0 +1,32 @@
+@import "./contentSide.scss";
+
+.header {
+	width: 100%;
+	margin-bottom: 30px;
+	padding: 10px 20px;
+
+	background-color: #FFF;
+
+	.logo {
+		max-width: 150px;
+		height: auto;
+		margin: 0 auto;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	@extend %content_shadow;
+}
+
+@media screen and (max-width: 768px) {
+	.header {
+		margin-bottom: 30px;
+		padding: 10px 15px;
+
+		.logo {
+			max-width: 140px;
+		}
+	}
+}

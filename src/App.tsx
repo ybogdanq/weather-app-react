@@ -1,56 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React, { useEffect } from "react";
+import "./App.scss";
+import { useAppDispatch, useAppSelector } from "./hooks/hooks";
+import { useActions } from "./hooks/useActions";
+import HomePage from "./pages/HomePage";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Footer from "./components/Footer";
+import Loader from "./components/Loader";
+import InfoModal from "./components/UI/InfoModal/InfoModal";
+import { setErrorAction } from "./store/reducers/errorReducer";
 
 function App() {
+  const dispatch = useAppDispatch();
+  const { getUserLocation, getWeatherState, getForecastState } = useActions();
+  const loaderState = useAppSelector((state) => state.loader.loader);
+  const position = useAppSelector((state) => state.position.position);
+  const errors = useAppSelector((state) => state.error.error);
+
+  const onErrorHandler = (error: GeolocationPositionError) => {
+    dispatch(setErrorAction({ message: error.message, type: "danger" }));
+  };
+
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition(getUserLocation, onErrorHandler);
+  }, []);
+
+  useEffect(() => {
+    if (position !== null) {
+      const city: string = position.components.city;
+      getWeatherState(city);
+      getForecastState(city);
+    }
+  }, [position]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+      {loaderState ? <Loader /> : null}
+      <HomePage />
+      <Footer />
+      {errors && <InfoModal {...errors} />}
     </div>
   );
 }
