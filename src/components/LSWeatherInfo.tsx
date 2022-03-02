@@ -13,7 +13,7 @@ const LSWeatherInfo: React.FC<IWeatherInfo> = ({ weatherState }) => {
   return (
     <div className="city-weather__leftside">
       <img
-        src={`http://openweathermap.org/img/w/${getWeatherInfo(
+        src={`https://openweathermap.org/img/w/${getWeatherInfo(
           weatherState,
           "icon"
         )}.png`}

@@ -31,7 +31,7 @@ const WeatherInfoSliderItem: React.FC<IWSliderItem> = ({
         <li>{getDateHours(weatherForecastItem.dt)}</li>
         <li>
           <img
-            src={`http://openweathermap.org/img/w/${getWeatherInfo(
+            src={`https://openweathermap.org/img/w/${getWeatherInfo(
               weatherForecastItem,
               "icon"
             )}.png`}
